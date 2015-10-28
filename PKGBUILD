@@ -1,12 +1,12 @@
 pkgname=par2cmdline
-pkgver=0.6.4
+pkgver=0.6.13
 pkgrel=1
 pkgdesc='A PAR 2.0 compatible file verification and repair tool'
 url='https://github.com/BlackIkeEagle/par2cmdline'
 license=('GPL2')
 arch=('x86_64')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/BlackIkeEagle/$pkgname/archive/v$pkgver.tar.gz")
-sha256sums=('431da50fdd794881bad7e1b0dee234e8102d7065f53abd7ce1e86be758810116')
+sha512sums=('')
 
 build() {
 	cd "$pkgname-$pkgver"
@@ -26,4 +26,3 @@ package() {
 	cd "$pkgname-$pkgver"
 	make DESTDIR="$pkgdir" install
 }
-
